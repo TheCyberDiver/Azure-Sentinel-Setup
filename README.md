@@ -10,11 +10,11 @@ Disclaimer: This Set-up requires basic knowledge of creating and configuring Vir
 
 1.0. Creating an Windows 10 endpoint virtual machine.
 
-  1.1. Start by setting up a standard Windows 10 virtual machine. I suggest making a new resource group.
+    1.1. Start by setting up a standard Windows 10 virtual machine. I suggest making a new resource group.
 
-  1.2. I will be naming mine honeypot-endpoint for a demonstration at the end. NOTE: I suggest making strong credentials!
+    1.2. I will be naming mine honeypot-endpoint for a demonstration at the end. NOTE: I suggest making strong credentials!
 
-  1.3. In later steps we will open the firewall on the honeypot-endpoint to allow ANY:ANY
+    1.3. In later steps we will open the firewall on the honeypot-endpoint to allow ANY:ANY
 
 2.0. Creating a Log Analytics Workspace and setting up data flow
 
