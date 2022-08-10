@@ -1,9 +1,9 @@
-# Azure-Sentinel-Setup
-
 #########################################
 #              Azure Sentinel           #
 #                  Set-up               #
 #########################################
+
+![image](https://user-images.githubusercontent.com/77608692/184008920-df90aaff-ec3b-4900-b848-e170d68af929.png)
 
 Disclaimer: This Set-up requires basic knowledge of creating and configuring Virtual Machines, Virtual Networks, Resource groups, and Virtual Machines.
 
