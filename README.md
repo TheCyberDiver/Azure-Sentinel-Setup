@@ -31,7 +31,31 @@ Disclaimer: This Set-up requires basic knowledge of creating and configuring Vir
   5.1. Within this Github repo I will add a powershell script 
   5.2. Download your FREE API key from ipgeolocation.io and insert that in the script and run the powershell script
   5.3. Now we will navigate back to Log Analytics work space >Custom logs
-  5.4. 
+  5.4. Go back to the VM and locate the log file in ProgramData and copy the premade logs
+  5.5. Notice: Right away my machine was being bruteforced from Netherlands
+  5.6 Create a Notepad of the logs and upload that into the custom logs in Log analytics work space
+  5.7. In the collection path put C:\ProgramData\failed_rdp.log as that is where the logs are in the VM and name it note: you will use the name to query it
+  5.8. Now navigate to Logs in the Log Analytics and try some basic Queries while we wait
+  
+  Examples: Security Event | Where EventID==4625  <-- 4625 is the event viewers failed logon
+  
+6.0. Making the data ingest
+  6.1. Run your query for me it was FAILED_RDP_WITH_IP_GEOLOCATION_CL and expand one of the logs.
+  6.2. It will show all the fields in the Raw data and we need to extract them
+  6.2. Highlight the values of one field and name it and then save.
+  6.3. Repeat that process for each value.
+  6.4. Now go back to Azure Sentinel and make a new workbook. Go to "Workbooks > Add new Workbook > Add new query"
+  6.5. Add a query within the workbook and paste this query ( FAILED_RDP_WITH_GEO_CL | summarize event_count=count() by sourcehost_CF, latitude_CF, longitude_CF,         country_CF, label_CF, destinationhost_CF
+| where destinationhost_CF != "samplehost"
+| where sourcehost_CF != "" )
+
+and change the visualization to map.
+
+
+
+
+
+
   
 
   
