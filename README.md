@@ -89,6 +89,9 @@ Disclaimer: This Set-up requires basic knowledge of creating and configuring Vir
 
 
 
+ Snippit of Map
+ 
+ ![image](https://user-images.githubusercontent.com/77608692/183999885-8dde071a-a041-49d6-8966-58e840ca39bd.png)
 
 
   
