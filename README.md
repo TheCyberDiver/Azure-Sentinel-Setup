@@ -82,9 +82,13 @@ Disclaimer: This Set-up requires basic knowledge of creating and configuring Vir
 
     6.6. Add a query within the workbook and paste this query
       FAILED_RDP_WITH_IP_GEOLOCATION_CL | summarize event_count=count() by sourcehost_CF, latitude_CF, longitude_CF, country_CF, label_CF, destinationhost_CF
+        | where destinationhost_CF != "samplehost"
+        | where destinationhost_CF != ""
 
   and change the visualization to map. Make sure you change the query name to what you named it. Now you will need to add the fields in there. 
   I chose to use the country instead of longitude and latitude!
+  
+  ANOTHER EDIT: YOU NEED to play around with your Map settings to get the numbers and bubbles to display right!!!!!
 
 
 
